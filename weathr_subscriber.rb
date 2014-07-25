@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 require 'bunny'
 
-require 'bunny'
-
 def subscribe(channel, exchange, options)
   exclusive = options[:exclusive] || false
   queue = channel.queue(options[:queue], exclusive: exclusive)
